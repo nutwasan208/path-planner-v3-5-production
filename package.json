@@ -1,0 +1,12 @@
+{
+  "name": "path-planner-v3-5-production-final",
+  "version": "3.5.1",
+  "private": true,
+  "scripts": {
+    "check": "node scripts/verify.mjs",
+    "build": "npm run check && node scripts/generate-config.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
