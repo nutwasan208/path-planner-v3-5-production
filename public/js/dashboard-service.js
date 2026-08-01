@@ -68,6 +68,12 @@
     const{data,error}=await db().from('school_settings').insert(row).select().single();if(error)throw error;return data;
   }
   async function updatePassword(password){if(String(password).length<8)throw new Error('รหัสผ่านต้องมีอย่างน้อย 8 ตัวอักษร');const{data,error}=await db().auth.updateUser({password});if(error)throw error;return data;}
+  async function deleteStudentHistory(studentId){
+    if(!studentId)throw new Error('ไม่พบรหัสผู้เล่น');
+    const{data,error}=await db().rpc('delete_student_history',{p_student_id:studentId});
+    if(error)throw error;
+    return data;
+  }
   async function importStudents(rows,classes){
     if(!Array.isArray(rows)||!rows.length)throw new Error('ไม่พบข้อมูลสำหรับนำเข้า');
     const classByName=Object.fromEntries(classes.map(c=>[c.name.trim(),c]));const missing=[...new Set(rows.map(r=>r.className.trim()).filter(n=>!classByName[n]))];
@@ -86,5 +92,5 @@
   }
   function subscribe(onChange){return db().channel('teacher-dashboard-v35').on('postgres_changes',{event:'*',schema:'public',table:'level_results'},onChange).on('postgres_changes',{event:'*',schema:'public',table:'game_sessions'},onChange).on('postgres_changes',{event:'*',schema:'public',table:'students'},onChange).on('postgres_changes',{event:'*',schema:'public',table:'classes'},onChange).subscribe();}
 
-  window.DashboardService={configured,db,session,login,logout,profile,loadAll,saveClass,saveAssessment,saveSchool,updatePassword,importStudents,backup,restore,subscribe};
+  window.DashboardService={configured,db,session,login,logout,profile,loadAll,saveClass,saveAssessment,saveSchool,updatePassword,deleteStudentHistory,importStudents,backup,restore,subscribe};
 })();

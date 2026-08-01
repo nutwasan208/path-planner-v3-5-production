@@ -10,3 +10,13 @@
 
 /* Path Planner v3.5 management */
 .management-row{align-items:stretch}.import-box,.backup-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.import-box input{max-width:100%}.helper-text{font-size:12px;color:var(--muted);line-height:1.55;margin-top:10px}.file-label{display:inline-flex!important;align-items:center;justify-content:center;border:2px solid var(--line);border-radius:999px;padding:9px 14px;margin:0!important;cursor:pointer}.file-label input{display:none}.settings-tabs{display:flex;gap:8px;border-bottom:2px solid var(--line);margin:8px 0 16px}.tab-btn{background:transparent;border-radius:12px 12px 0 0;color:var(--muted)}.tab-btn.active{background:#eaf8f6;color:var(--primary)}.tab-panel{display:none}.tab-panel.active{display:block}.settings-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}.settings-form.narrow{max-width:560px;grid-template-columns:1fr}.settings-form>button{grid-column:1/-1}.logo-preview{border:2px dashed var(--line);border-radius:14px;min-height:110px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--muted);gap:6px}.logo-preview img{max-width:160px;max-height:80px;object-fit:contain}.login-card label{margin-top:18px}@media(max-width:680px){.settings-form{grid-template-columns:1fr}.settings-form>button{grid-column:auto}.import-box,.backup-actions{align-items:stretch;flex-direction:column}.import-box>* ,.backup-actions>*{width:100%}}
+
+/* Delete-player confirmation */
+.delete-student{white-space:nowrap;}
+.delete-confirm-card{text-align:center;max-width:470px;}
+.delete-warning-icon{font-size:52px;line-height:1;margin-bottom:4px;}
+.delete-student-name{font-family:'Kanit',sans-serif;font-weight:800;font-size:22px;color:#8b2033;margin:8px 0;}
+.delete-warning-text{background:#fff1f2;border:1px solid #fecdd3;color:#9f1239;border-radius:14px;padding:12px 14px;line-height:1.55;font-weight:600;}
+.delete-confirm-card .modal-actions{justify-content:center;margin-top:18px;}
+.delete-confirm-card .modal-actions button{min-width:130px;}
+button:disabled{opacity:.58;cursor:not-allowed;}

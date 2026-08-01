@@ -46,3 +46,7 @@ Environment variables ที่จำเป็น:
 
 เวอร์ชันนี้นำช่องชั้นเรียนและเลขที่ออกจากหน้าเริ่มเกมแล้ว ก่อน Deploy ให้รันไฟล์
 `supabase/name_only_student_migration.sql` ใน Supabase SQL Editor หนึ่งครั้ง เพื่อให้ฐานข้อมูลรองรับข้อมูลนักเรียนที่ไม่มีชั้นเรียนและเลขที่
+
+
+## Delete individual player history
+Before deploying this release, run `supabase/delete_student_history_migration.sql` once in Supabase SQL Editor. The teacher dashboard then supports permanent deletion of one player's sessions and level results after a second confirmation click.
