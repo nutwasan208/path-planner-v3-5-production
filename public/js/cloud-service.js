@@ -50,7 +50,7 @@
     }catch(error){
       try{
         const cached=JSON.parse(localStorage.getItem(BOOTSTRAP_CACHE_KEY)||'null');
-        if(cached?.classes?.length)return {...cached,_fromCache:true};
+        if(cached)return {...cached,_fromCache:true};
       }catch(_){}
       throw error;
     }
@@ -58,12 +58,8 @@
 
   function normalizeStudentInput(v){
     const studentName=String(v.studentName||'').trim();
-    const classId=String(v.classId||'').trim();
-    const studentNumber=Number(v.studentNumber);
     if(!studentName) throw new Error('กรุณาระบุชื่อนักเรียน');
-    if(!classId) throw new Error('กรุณาเลือกห้องเรียน');
-    if(!Number.isInteger(studentNumber)||studentNumber<1) throw new Error('เลขที่นักเรียนไม่ถูกต้อง');
-    return {studentName,classId,studentNumber};
+    return {studentName};
   }
 
   async function startSession(v){
@@ -71,8 +67,8 @@
     const data=await rpc('start_game_session',{
       p_game_slug:cfg.GAME_SLUG || 'path-planner',
       p_student_name:n.studentName,
-      p_class_id:n.classId,
-      p_student_number:n.studentNumber,
+      p_class_id:null,
+      p_student_number:null,
       p_device_id:String(v.deviceId||deviceId()).slice(0,200),
       p_user_agent:String(navigator.userAgent||'').slice(0,1000),
       p_academic_year:Number(cfg.ACADEMIC_YEAR||2569),

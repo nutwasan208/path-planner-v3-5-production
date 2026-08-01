@@ -1,6 +1,6 @@
 {
   "name": "path-planner-v3-5-production-final",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "private": true,
   "scripts": {
     "check": "node scripts/verify.mjs",
