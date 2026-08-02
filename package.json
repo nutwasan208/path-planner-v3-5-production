@@ -1,6 +1,6 @@
 {
-  "name": "path-planner-v3-6-mobile-ux",
-  "version": "3.6.0",
+  "name": "path-planner-v3-6-1-success-audio-final",
+  "version": "3.6.1",
   "private": true,
   "scripts": {
     "check": "node scripts/verify.mjs",
