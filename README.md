@@ -59,3 +59,9 @@ Before deploying this release, run `supabase/delete_student_history_migration.sq
 - Restored square 1:1 destination images in the win dialog while keeping all controls visible on mobile.
 - Added a large fireworks celebration after completing level 10.
 - Reworked the teacher dashboard into mobile cards so it no longer requires page zooming.
+
+
+## v3.6.2
+- ใช้เสียง final-cheer.mp3 เฉพาะเมื่อผ่านด่านที่ 10
+- สรุปคะแนนรวม เวลารวม และดาวสะสมบนหน้าความสำเร็จ
+- บันทึกภาพความสำเร็จเป็น PNG ได้
