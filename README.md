@@ -50,3 +50,12 @@ Environment variables ที่จำเป็น:
 
 ## Delete individual player history
 Before deploying this release, run `supabase/delete_student_history_migration.sql` once in Supabase SQL Editor. The teacher dashboard then supports permanent deletion of one player's sessions and level results after a second confirmation click.
+
+
+## Version 3.6 update
+
+- Added a return-to-name button on the level-select screen while preserving the current player name and cloud session when unchanged.
+- Added stable success voice audio with applause and mobile audio unlocking.
+- Restored square 1:1 destination images in the win dialog while keeping all controls visible on mobile.
+- Added a large fireworks celebration after completing level 10.
+- Reworked the teacher dashboard into mobile cards so it no longer requires page zooming.
