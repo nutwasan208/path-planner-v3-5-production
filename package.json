@@ -1,6 +1,6 @@
 {
-  "name": "path-planner-v3-6-1-success-audio-final",
-  "version": "3.6.2",
+  "name": "path-planner-v3-6-3-audio-trigger-fix",
+  "version": "3.6.3",
   "private": true,
   "scripts": {
     "check": "node scripts/verify.mjs",
